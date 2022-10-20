@@ -11,7 +11,7 @@ public class LearningCurve : MonoBehaviour
     {
         int startAge = 10;
         int ageIncrement = 5;
-        ComputeAge(ageIncrement);
+        int computedAge = ComputeAge(ageIncrement);
         float pi = 3.14f;
 
         pi = startAge; //pi <- startAge; pi := startAge
@@ -27,8 +27,10 @@ public class LearningCurve : MonoBehaviour
     {
         //float startAge = 123.3f;
     }
-    void ComputeAge(int ageIncrement)
+    int ComputeAge(int a)
     {
-        Debug.Log(currentAge + ageIncrement);
+        int result = currentAge+a;
+        Debug.Log(result);
+        return result;
     }
 }
