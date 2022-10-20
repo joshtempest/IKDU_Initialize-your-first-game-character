@@ -15,11 +15,6 @@ public class Character : MonoBehaviour
         LevelUp(characterLevel, EXP);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     /// <summary>
     /// Computes level of character before and after level up
     /// </summary>
