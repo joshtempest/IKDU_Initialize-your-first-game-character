@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public int currentAge;
+    public int currentAge = 55;
+    //int ageIncrement = 5;
     // Start is called before the first frame update
     void Start()
     {
         int startAge = 10;
         int ageIncrement = 5;
+        ComputeAge(ageIncrement);
         float pi = 3.14f;
+
         pi = startAge; //pi <- startAge; pi := startAge
 
         //startAge + pi = pi; TOTAL NONSENSE!!!
         startAge = (int)pi;
         currentAge = startAge + ageIncrement;
-        Debug.Log($"My intial age was {startAge}, and my current age is {currentAge}");
+        //Debug.Log($"My intial age was {startAge}, and my current age is {currentAge}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        float startAge = 123.3f;
+        //float startAge = 123.3f;
+    }
+    void ComputeAge(int ageIncrement)
+    {
+        Debug.Log(currentAge + ageIncrement);
     }
 }
