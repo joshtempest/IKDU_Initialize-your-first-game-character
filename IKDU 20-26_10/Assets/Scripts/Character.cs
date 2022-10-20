@@ -20,7 +20,7 @@ public class Character : MonoBehaviour
         
     }
     /// <summary>
-    /// Tells level of character after level up
+    /// Computes level of character before and after level up
     /// </summary>
     public void LevelUp(int characterLevel)
     {
