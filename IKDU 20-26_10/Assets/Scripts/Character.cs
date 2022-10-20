@@ -9,9 +9,10 @@ public class Character : MonoBehaviour
     void Start()
     {
         int characterLevel = 1;
-        Debug.Log(characterName);
-        Debug.Log(characterLevel);
-        LevelUp(characterLevel);
+        int EXP = 0;
+        //Debug.Log(characterName);
+        //Debug.Log(characterLevel);
+        LevelUp(characterLevel, EXP);
     }
 
     // Update is called once per frame
@@ -22,11 +23,13 @@ public class Character : MonoBehaviour
     /// <summary>
     /// Computes level of character before and after level up
     /// </summary>
-    public void LevelUp(int characterLevel)
+    public void LevelUp(int Level, int EXP)
     {
-        Debug.LogFormat("Your name is {0} and you are currently level: {1}, DO YOUR BEST!", characterName, characterLevel);
+        Debug.LogFormat("Your name is {0} and you are currently level: {1}, You have {2}. You need 100 to level up. DO YOUR BEST!", characterName, Level, EXP);
+        Debug.Log($"{characterName} has gained 145 EXP");
         Debug.Log($"{characterName} has gained enough experience, LEVEL UP");
-        characterLevel += 1;
-        Debug.Log($"{characterName} is now level: {characterLevel}. Well done!");
+        Level += 1;
+        EXP += 45;
+        Debug.Log($"{characterName} is now level: {Level}. Well done!");
     }
 }
